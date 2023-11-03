@@ -24,6 +24,14 @@ st.write("Hello, this app was designed to showcase some of the visuals that have
          "basic functionality. Existing BI platforms were skipped as there might not be an optimal solution for some "
          "visualizations or underlining circumstances.")
 
+notebook_url = "https://colab.research.google.com/drive/1z1rNEBoSbl1Zr9nZglCUHQ8usGGSRVGB?usp=sharing"
+st.markdown(f"""
+    <div style="background-color: #f0f2f6; padding: 10px; border-radius: 5px;">
+        <p style="font-size: 16px;">This app is a demo version. For more detailed analysis, check out the 
+        <a href="{notebook_url}" target="_blank" style="color: #2585a6; font-weight: bold;">original notebook</a>.</p>
+    </div>
+    """, unsafe_allow_html=True)
+
 st.table(funnel_data)
 
 st.header('Average Time on Page', divider='rainbow')
@@ -212,7 +220,7 @@ st.markdown(markdown_content)
 st.subheader(':blue[bounce rate for each page type]')
 plot_daily_bounce_rates(data)
 
-## Revisit Rate
+# Revisit Rate
 st.header('Revisit Rate', divider='rainbow')
 st.subheader(':blue[Most loyal users based on the Revisit rate]')
 show_loyal_users(data)
